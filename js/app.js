@@ -8,8 +8,8 @@ import { openDirectory, readFile, writeFile, ensureSubdir, isFileSystemAccessSup
 import { uploadDirectory, downloadFile } from './io/file-fallback.js';
 import { initKeyboardView, resetKeyStates } from './ui/keyboard-view.js';
 import { initActionPicker, refreshRemapIndicators } from './ui/key-item.js';
-import { initEffectSelector } from './ui/effect-selector.js';
-import { initColorPicker } from './ui/color-picker.js';
+import { initEffectSelector, refreshEffectSelector } from './ui/effect-selector.js';
+import { initColorPicker, refreshPerKeyColors } from './ui/color-picker.js';
 import { initMacroEditor } from './ui/macro-editor.js';
 import { initProfileTabs } from './ui/profile-tabs.js';
 import { initSettingsPanel } from './ui/settings-panel.js';
@@ -55,6 +55,7 @@ export function createEmptyProfile(num) {
     perKeyColors: [],
     fnPerKeyColors: [],
     baseColor: null,
+    fnBaseColor: null,
     rawLayout: [],
     rawLighting: [],
     dirty: false,
@@ -141,6 +142,7 @@ export async function loadProfile(num) {
     profile.perKeyColors = parsed.perKeyColors;
     profile.fnPerKeyColors = parsed.fnPerKeyColors;
     profile.baseColor = parsed.baseColor;
+    profile.fnBaseColor = parsed.fnBaseColor;
     profile.rawLighting = parsed.rawLines;
   }
 
@@ -231,6 +233,8 @@ export function refreshUI() {
   // Reset keyboard view then reapply indicators
   resetKeyStates();
   refreshRemapIndicators();
+  refreshEffectSelector();
+  refreshPerKeyColors();
 }
 
 /**

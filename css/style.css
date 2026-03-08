@@ -373,6 +373,79 @@ select {
   color: #fff;
 }
 
+/* === Effect Selector === */
+.effect-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.effect-select {
+  width: 100%;
+  padding: 6px 10px;
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--key-border);
+  border-radius: var(--radius);
+  margin-bottom: var(--gap);
+}
+
+.effect-param {
+  margin-bottom: var(--gap);
+}
+
+.effect-param label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.effect-slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.effect-param-value {
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+.effect-color-input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid var(--key-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: transparent;
+  padding: 2px;
+}
+
+.effect-info {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.direction-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.direction-btn {
+  padding: 4px 10px;
+  font-size: 1rem;
+}
+
+.direction-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
 /* === Toast === */
 .toast {
   position: fixed;
