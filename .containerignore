@@ -1,0 +1,31 @@
+.git/
+.github/
+.gitignore
+.claude/
+.specify/
+.playwright-mcp/
+specs/
+
+# Reference materials (not needed in container)
+*.pdf
+*.xml
+*.png
+!assets/*.png
+reduce_repomix.py
+vdrive/
+
+# Documentation
+CLAUDE.md
+README.md
+LICENSE
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.tmp
+*.log
