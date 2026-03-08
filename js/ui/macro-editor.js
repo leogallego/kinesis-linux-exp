@@ -10,6 +10,9 @@ import { state, markDirty } from '../app.js';
 let _listContainer = null;
 let _editorContainer = null;
 
+/** Track collapsed state per section (persists across re-renders) */
+const _collapsedSections = new Set();
+
 // Editor state
 let _editingMacro = null; // null = creating new, object = editing existing
 let _pendingActions = [];
@@ -48,25 +51,15 @@ function renderMacroPanel() {
   const tapHolds = profile.tapAndHolds.filter(th => th.isFn === isFn);
 
   if (macros.length > 0) {
-    const macroHeading = document.createElement('h3');
-    macroHeading.className = 'macro-section-title';
-    macroHeading.textContent = 'Macros';
-    _listContainer.appendChild(macroHeading);
-
-    for (const macro of macros) {
-      _listContainer.appendChild(createMacroItem(macro));
-    }
+    _listContainer.appendChild(
+      createCollapsibleSection('Macros', macros.length, macros.map(m => createMacroItem(m)))
+    );
   }
 
   if (tapHolds.length > 0) {
-    const tahHeading = document.createElement('h3');
-    tahHeading.className = 'macro-section-title';
-    tahHeading.textContent = 'Tap & Hold';
-    _listContainer.appendChild(tahHeading);
-
-    for (const th of tapHolds) {
-      _listContainer.appendChild(createTapHoldItem(th));
-    }
+    _listContainer.appendChild(
+      createCollapsibleSection('Tap & Hold', tapHolds.length, tapHolds.map(th => createTapHoldItem(th)))
+    );
   }
 
   if (macros.length === 0 && tapHolds.length === 0) {
@@ -473,6 +466,58 @@ function deleteTapHold(th) {
     markDirty();
     renderMacroPanel();
   }
+}
+
+// ---------------------------------------------------------------------------
+// Collapsible Section
+// ---------------------------------------------------------------------------
+
+function createCollapsibleSection(title, count, childElements) {
+  const groupEl = document.createElement('div');
+  groupEl.className = 'action-group';
+
+  const isCollapsed = _collapsedSections.has(title);
+
+  const headerEl = document.createElement('div');
+  headerEl.className = 'action-group__header';
+
+  const chevronEl = document.createElement('span');
+  chevronEl.className = 'action-group__chevron' + (isCollapsed ? ' collapsed' : '');
+  chevronEl.textContent = '\u25BC';
+
+  const titleEl = document.createElement('span');
+  titleEl.className = 'action-group__title';
+  titleEl.textContent = title;
+
+  const countEl = document.createElement('span');
+  countEl.className = 'action-group__count';
+  countEl.textContent = `(${count})`;
+
+  headerEl.appendChild(chevronEl);
+  headerEl.appendChild(titleEl);
+  headerEl.appendChild(countEl);
+
+  const itemsEl = document.createElement('div');
+  itemsEl.className = 'action-group__items' + (isCollapsed ? ' collapsed' : '');
+
+  for (const child of childElements) {
+    itemsEl.appendChild(child);
+  }
+
+  headerEl.addEventListener('click', () => {
+    const nowCollapsed = _collapsedSections.has(title);
+    if (nowCollapsed) {
+      _collapsedSections.delete(title);
+    } else {
+      _collapsedSections.add(title);
+    }
+    chevronEl.classList.toggle('collapsed', !nowCollapsed);
+    itemsEl.classList.toggle('collapsed', !nowCollapsed);
+  });
+
+  groupEl.appendChild(headerEl);
+  groupEl.appendChild(itemsEl);
+  return groupEl;
 }
 
 // ---------------------------------------------------------------------------

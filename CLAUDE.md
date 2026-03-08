@@ -91,6 +91,8 @@ Project governance principles are defined in `.specify/memory/constitution.md` (
 ## Active Technologies
 - Vanilla JavaScript (ES2022+) + None (no framework, no npm) (001-edge-rgb-configurator)
 - Browser File System Access API + upload/download fallback (001-edge-rgb-configurator)
+- Vanilla JavaScript (ES2022+) + None (no framework, no bundler) (003-sidebar-tabbar-redesign)
+- N/A (UI-only change) (003-sidebar-tabbar-redesign)
 
 ## Recent Changes
 - 001-edge-rgb-configurator: Added Vanilla JavaScript (ES2022+) + None (no framework, no npm)
