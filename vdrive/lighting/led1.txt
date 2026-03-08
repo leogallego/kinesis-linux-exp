@@ -1,0 +1,4 @@
+[breathe]>[spd5]
+[mono]>[0][0][0]
+fn [wave]>[spd5][dirdown]
+[mono]>[0][0][0]

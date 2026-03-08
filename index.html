@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge RGB Configurator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="toolbar">
+    <h1 class="toolbar__title">Edge RGB Configurator</h1>
+    <div class="toolbar__actions">
+      <button id="btn-open" type="button">Open Directory</button>
+      <button id="btn-save" type="button" disabled>Save</button>
+      <label id="label-upload" class="toolbar__upload" hidden>
+        <span>Upload Files</span>
+        <input id="input-upload" type="file" webkitdirectory multiple hidden>
+      </label>
+    </div>
+    <div class="toolbar__status">
+      <span id="status-dir" class="status-badge">No directory open</span>
+    </div>
+  </header>
+
+  <nav id="profile-tabs" class="profile-tabs" aria-label="Profile selector">
+    <!-- Populated by js/ui/profile-tabs.js -->
+  </nav>
+
+  <main class="workspace">
+    <section class="keyboard-area">
+      <div class="layer-toggle">
+        <button id="btn-layer-base" type="button" class="layer-toggle__btn active" aria-pressed="true">Base Layer</button>
+        <button id="btn-layer-fn" type="button" class="layer-toggle__btn" aria-pressed="false">FN Layer</button>
+      </div>
+      <div id="keyboard-container" class="keyboard-container">
+        <!-- SVG keyboard loaded here by js/ui/keyboard-view.js -->
+      </div>
+    </section>
+
+    <aside class="side-panel">
+      <nav class="panel-nav">
+        <button id="btn-tab-keys" type="button" class="panel-nav__btn active">Keys</button>
+        <button id="btn-tab-lighting" type="button" class="panel-nav__btn">Lighting</button>
+        <button id="btn-tab-macros" type="button" class="panel-nav__btn">Macros</button>
+        <button id="btn-tab-settings" type="button" class="panel-nav__btn">Settings</button>
+      </nav>
+
+      <div class="panel-content">
+        <div id="panel-action" class="panel" hidden>
+          <h2 class="panel__title">Assign Action</h2>
+          <div class="panel__selected-key">
+            <span>Selected: </span><strong id="selected-key-label">—</strong>
+          </div>
+          <input id="action-search" type="search" placeholder="Filter actions..." class="panel__search">
+          <div id="action-list" class="action-list">
+            <!-- Populated by js/ui/key-item.js -->
+          </div>
+        </div>
+
+        <div id="panel-lighting" class="panel" hidden>
+          <h2 class="panel__title">Lighting</h2>
+          <div id="effect-selector-container">
+            <!-- Populated by js/ui/effect-selector.js -->
+          </div>
+          <div id="color-picker-container">
+            <!-- Populated by js/ui/color-picker.js -->
+          </div>
+        </div>
+
+        <div id="panel-macros" class="panel" hidden>
+          <h2 class="panel__title">Macros</h2>
+          <div id="macro-list-container">
+            <!-- Populated by js/ui/macro-editor.js -->
+          </div>
+        </div>
+
+        <div id="panel-settings" class="panel" hidden>
+          <h2 class="panel__title">Keyboard Settings</h2>
+          <div id="settings-container">
+            <!-- Populated by js/ui/settings-panel.js -->
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

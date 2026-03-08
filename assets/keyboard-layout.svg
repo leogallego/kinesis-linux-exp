@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 255">
+  <style>
+    .key-rect { fill: #2a2a4a; stroke: #444466; stroke-width: 1.5; rx: 4; ry: 4; cursor: pointer; }
+    .key-rect:hover { fill: #3a3a5a; stroke: #ff6b81; }
+    .key-rect.selected { fill: #e94560; stroke: #fff; stroke-width: 2; }
+    .key-rect.remapped { stroke: #f5a623; stroke-width: 2; }
+    .key-label { fill: #e6e6e6; font-size: 9px; font-family: sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; user-select: none; }
+    .key-label-sm { font-size: 7px; }
+  </style>
+
+  <!-- LEFT HALF -->
+  <g id="left-half" transform="translate(0, 0)">
+
+    <!-- Row 0: HK0, Esc, F1-F6 -->
+    <g data-token="hk0" data-side="left"><rect class="key-rect" x="2" y="2" width="38" height="30"/><text class="key-label key-label-sm" x="21" y="17">HK0</text></g>
+    <g data-token="esc" data-side="left"><rect class="key-rect" x="44" y="2" width="38" height="30"/><text class="key-label" x="63" y="17">Esc</text></g>
+    <g data-token="f1" data-side="left"><rect class="key-rect" x="86" y="2" width="38" height="30"/><text class="key-label" x="105" y="17">F1</text></g>
+    <g data-token="f2" data-side="left"><rect class="key-rect" x="128" y="2" width="38" height="30"/><text class="key-label" x="147" y="17">F2</text></g>
+    <g data-token="f3" data-side="left"><rect class="key-rect" x="170" y="2" width="38" height="30"/><text class="key-label" x="189" y="17">F3</text></g>
+    <g data-token="f4" data-side="left"><rect class="key-rect" x="212" y="2" width="38" height="30"/><text class="key-label" x="231" y="17">F4</text></g>
+    <g data-token="f5" data-side="left"><rect class="key-rect" x="254" y="2" width="38" height="30"/><text class="key-label" x="273" y="17">F5</text></g>
+    <g data-token="f6" data-side="left"><rect class="key-rect" x="296" y="2" width="38" height="30"/><text class="key-label" x="315" y="17">F6</text></g>
+
+    <!-- Row 1: HK1, HK2, ~, 1-6 -->
+    <g data-token="hk1" data-side="left"><rect class="key-rect" x="2" y="36" width="38" height="38"/><text class="key-label key-label-sm" x="21" y="55">HK1</text></g>
+    <g data-token="hk2" data-side="left"><rect class="key-rect" x="44" y="36" width="38" height="38"/><text class="key-label key-label-sm" x="63" y="55">HK2</text></g>
+    <g data-token="tilde" data-side="left"><rect class="key-rect" x="86" y="36" width="38" height="38"/><text class="key-label" x="105" y="55">~</text></g>
+    <g data-token="1" data-side="left"><rect class="key-rect" x="128" y="36" width="38" height="38"/><text class="key-label" x="147" y="55">1</text></g>
+    <g data-token="2" data-side="left"><rect class="key-rect" x="170" y="36" width="38" height="38"/><text class="key-label" x="189" y="55">2</text></g>
+    <g data-token="3" data-side="left"><rect class="key-rect" x="212" y="36" width="38" height="38"/><text class="key-label" x="231" y="55">3</text></g>
+    <g data-token="4" data-side="left"><rect class="key-rect" x="254" y="36" width="38" height="38"/><text class="key-label" x="273" y="55">4</text></g>
+    <g data-token="5" data-side="left"><rect class="key-rect" x="296" y="36" width="38" height="38"/><text class="key-label" x="315" y="55">5</text></g>
+    <g data-token="6" data-side="left"><rect class="key-rect" x="338" y="36" width="38" height="38"/><text class="key-label" x="357" y="55">6</text></g>
+
+    <!-- Row 2: HK3, HK4, Tab, Q-T -->
+    <g data-token="hk3" data-side="left"><rect class="key-rect" x="2" y="78" width="38" height="38"/><text class="key-label key-label-sm" x="21" y="97">HK3</text></g>
+    <g data-token="hk4" data-side="left"><rect class="key-rect" x="44" y="78" width="38" height="38"/><text class="key-label key-label-sm" x="63" y="97">HK4</text></g>
+    <g data-token="tab" data-side="left"><rect class="key-rect" x="86" y="78" width="59" height="38"/><text class="key-label" x="115" y="97">Tab</text></g>
+    <g data-token="q" data-side="left"><rect class="key-rect" x="149" y="78" width="38" height="38"/><text class="key-label" x="168" y="97">Q</text></g>
+    <g data-token="w" data-side="left"><rect class="key-rect" x="191" y="78" width="38" height="38"/><text class="key-label" x="210" y="97">W</text></g>
+    <g data-token="e" data-side="left"><rect class="key-rect" x="233" y="78" width="38" height="38"/><text class="key-label" x="252" y="97">E</text></g>
+    <g data-token="r" data-side="left"><rect class="key-rect" x="275" y="78" width="38" height="38"/><text class="key-label" x="294" y="97">R</text></g>
+    <g data-token="t" data-side="left"><rect class="key-rect" x="317" y="78" width="38" height="38"/><text class="key-label" x="336" y="97">T</text></g>
+
+    <!-- Row 3: HK5, HK6, Caps, A-G -->
+    <g data-token="hk5" data-side="left"><rect class="key-rect" x="2" y="120" width="38" height="38"/><text class="key-label key-label-sm" x="21" y="139">HK5</text></g>
+    <g data-token="hk6" data-side="left"><rect class="key-rect" x="44" y="120" width="38" height="38"/><text class="key-label key-label-sm" x="63" y="139">HK6</text></g>
+    <g data-token="caps" data-side="left"><rect class="key-rect" x="86" y="120" width="69" height="38"/><text class="key-label" x="120" y="139">Caps</text></g>
+    <g data-token="a" data-side="left"><rect class="key-rect" x="159" y="120" width="38" height="38"/><text class="key-label" x="178" y="139">A</text></g>
+    <g data-token="s" data-side="left"><rect class="key-rect" x="201" y="120" width="38" height="38"/><text class="key-label" x="220" y="139">S</text></g>
+    <g data-token="d" data-side="left"><rect class="key-rect" x="243" y="120" width="38" height="38"/><text class="key-label" x="262" y="139">D</text></g>
+    <g data-token="f" data-side="left"><rect class="key-rect" x="285" y="120" width="38" height="38"/><text class="key-label" x="304" y="139">F</text></g>
+    <g data-token="g" data-side="left"><rect class="key-rect" x="327" y="120" width="38" height="38"/><text class="key-label" x="346" y="139">G</text></g>
+
+    <!-- Row 4: HK7, HK8, LShift, Z-B -->
+    <g data-token="hk7" data-side="left"><rect class="key-rect" x="2" y="162" width="38" height="38"/><text class="key-label key-label-sm" x="21" y="181">HK7</text></g>
+    <g data-token="hk8" data-side="left"><rect class="key-rect" x="44" y="162" width="38" height="38"/><text class="key-label key-label-sm" x="63" y="181">HK8</text></g>
+    <g data-token="lshft" data-side="left"><rect class="key-rect" x="86" y="162" width="90" height="38"/><text class="key-label" x="131" y="181">LShift</text></g>
+    <g data-token="z" data-side="left"><rect class="key-rect" x="180" y="162" width="38" height="38"/><text class="key-label" x="199" y="181">Z</text></g>
+    <g data-token="x" data-side="left"><rect class="key-rect" x="222" y="162" width="38" height="38"/><text class="key-label" x="241" y="181">X</text></g>
+    <g data-token="c" data-side="left"><rect class="key-rect" x="264" y="162" width="38" height="38"/><text class="key-label" x="283" y="181">C</text></g>
+    <g data-token="v" data-side="left"><rect class="key-rect" x="306" y="162" width="38" height="38"/><text class="key-label" x="325" y="181">V</text></g>
+    <g data-token="b" data-side="left"><rect class="key-rect" x="348" y="162" width="38" height="38"/><text class="key-label" x="367" y="181">B</text></g>
+
+    <!-- Row 5: HK9, HK10, LCtrl, LWin, LAlt, Space -->
+    <g data-token="hk9" data-side="left"><rect class="key-rect" x="2" y="204" width="38" height="38"/><text class="key-label key-label-sm" x="21" y="223">HK9</text></g>
+    <g data-token="hk10" data-side="left"><rect class="key-rect" x="44" y="204" width="38" height="38"/><text class="key-label key-label-sm" x="63" y="223">HK10</text></g>
+    <g data-token="lctrl" data-side="left"><rect class="key-rect" x="86" y="204" width="51" height="38"/><text class="key-label key-label-sm" x="111" y="223">LCtrl</text></g>
+    <g data-token="lwin" data-side="left"><rect class="key-rect" x="141" y="204" width="51" height="38"/><text class="key-label key-label-sm" x="166" y="223">LWin</text></g>
+    <g data-token="lalt" data-side="left"><rect class="key-rect" x="196" y="204" width="51" height="38"/><text class="key-label key-label-sm" x="221" y="223">LAlt</text></g>
+    <g data-token="lspc" data-side="left"><rect class="key-rect" x="251" y="204" width="135" height="38"/><text class="key-label" x="318" y="223">Space</text></g>
+  </g>
+
+  <!-- RIGHT HALF -->
+  <g id="right-half" transform="translate(430, 0)">
+
+    <!-- Row 0: F7-F12, PrtSc, Pause, Del -->
+    <g data-token="f7" data-side="right"><rect class="key-rect" x="2" y="2" width="38" height="30"/><text class="key-label" x="21" y="17">F7</text></g>
+    <g data-token="f8" data-side="right"><rect class="key-rect" x="44" y="2" width="38" height="30"/><text class="key-label" x="63" y="17">F8</text></g>
+    <g data-token="f9" data-side="right"><rect class="key-rect" x="86" y="2" width="38" height="30"/><text class="key-label" x="105" y="17">F9</text></g>
+    <g data-token="f10" data-side="right"><rect class="key-rect" x="128" y="2" width="38" height="30"/><text class="key-label" x="147" y="17">F10</text></g>
+    <g data-token="f11" data-side="right"><rect class="key-rect" x="170" y="2" width="38" height="30"/><text class="key-label" x="189" y="17">F11</text></g>
+    <g data-token="f12" data-side="right"><rect class="key-rect" x="212" y="2" width="38" height="30"/><text class="key-label" x="231" y="17">F12</text></g>
+    <g data-token="prnt" data-side="right"><rect class="key-rect" x="254" y="2" width="38" height="30"/><text class="key-label key-label-sm" x="273" y="17">PrtSc</text></g>
+    <g data-token="pause" data-side="right"><rect class="key-rect" x="296" y="2" width="38" height="30"/><text class="key-label key-label-sm" x="315" y="17">Pause</text></g>
+    <g data-token="del" data-side="right"><rect class="key-rect" x="338" y="2" width="38" height="30"/><text class="key-label" x="357" y="17">Del</text></g>
+
+    <!-- Row 1: 7-0, -, =, Bksp, Home -->
+    <g data-token="7" data-side="right"><rect class="key-rect" x="2" y="36" width="38" height="38"/><text class="key-label" x="21" y="55">7</text></g>
+    <g data-token="8" data-side="right"><rect class="key-rect" x="44" y="36" width="38" height="38"/><text class="key-label" x="63" y="55">8</text></g>
+    <g data-token="9" data-side="right"><rect class="key-rect" x="86" y="36" width="38" height="38"/><text class="key-label" x="105" y="55">9</text></g>
+    <g data-token="0" data-side="right"><rect class="key-rect" x="128" y="36" width="38" height="38"/><text class="key-label" x="147" y="55">0</text></g>
+    <g data-token="hyph" data-side="right"><rect class="key-rect" x="170" y="36" width="38" height="38"/><text class="key-label" x="189" y="55">-</text></g>
+    <g data-token="=" data-side="right"><rect class="key-rect" x="212" y="36" width="38" height="38"/><text class="key-label" x="231" y="55">=</text></g>
+    <g data-token="bspc" data-side="right"><rect class="key-rect" x="254" y="36" width="80" height="38"/><text class="key-label" x="294" y="55">Bksp</text></g>
+    <g data-token="home" data-side="right"><rect class="key-rect" x="338" y="36" width="38" height="38"/><text class="key-label" x="357" y="55">Home</text></g>
+
+    <!-- Row 2: Y-P, [, ], \, End -->
+    <g data-token="y" data-side="right"><rect class="key-rect" x="23" y="78" width="38" height="38"/><text class="key-label" x="42" y="97">Y</text></g>
+    <g data-token="u" data-side="right"><rect class="key-rect" x="65" y="78" width="38" height="38"/><text class="key-label" x="84" y="97">U</text></g>
+    <g data-token="i" data-side="right"><rect class="key-rect" x="107" y="78" width="38" height="38"/><text class="key-label" x="126" y="97">I</text></g>
+    <g data-token="o" data-side="right"><rect class="key-rect" x="149" y="78" width="38" height="38"/><text class="key-label" x="168" y="97">O</text></g>
+    <g data-token="p" data-side="right"><rect class="key-rect" x="191" y="78" width="38" height="38"/><text class="key-label" x="210" y="97">P</text></g>
+    <g data-token="obrk" data-side="right"><rect class="key-rect" x="233" y="78" width="38" height="38"/><text class="key-label" x="252" y="97">[</text></g>
+    <g data-token="cbrk" data-side="right"><rect class="key-rect" x="275" y="78" width="38" height="38"/><text class="key-label" x="294" y="97">]</text></g>
+    <g data-token="\" data-side="right"><rect class="key-rect" x="317" y="78" width="59" height="38"/><text class="key-label" x="346" y="97">\</text></g>
+    <g data-token="end" data-side="right"><rect class="key-rect" x="380" y="78" width="38" height="38"/><text class="key-label" x="399" y="97">End</text></g>
+
+    <!-- Row 3: H-L, ;, ', Enter, PgUp -->
+    <g data-token="h" data-side="right"><rect class="key-rect" x="33" y="120" width="38" height="38"/><text class="key-label" x="52" y="139">H</text></g>
+    <g data-token="j" data-side="right"><rect class="key-rect" x="75" y="120" width="38" height="38"/><text class="key-label" x="94" y="139">J</text></g>
+    <g data-token="k" data-side="right"><rect class="key-rect" x="117" y="120" width="38" height="38"/><text class="key-label" x="136" y="139">K</text></g>
+    <g data-token="l" data-side="right"><rect class="key-rect" x="159" y="120" width="38" height="38"/><text class="key-label" x="178" y="139">L</text></g>
+    <g data-token="colon" data-side="right"><rect class="key-rect" x="201" y="120" width="38" height="38"/><text class="key-label" x="220" y="139">;</text></g>
+    <g data-token="apos" data-side="right"><rect class="key-rect" x="243" y="120" width="38" height="38"/><text class="key-label" x="262" y="139">'</text></g>
+    <g data-token="ent" data-side="right"><rect class="key-rect" x="285" y="120" width="91" height="38"/><text class="key-label" x="330" y="139">Enter</text></g>
+    <g data-token="pup" data-side="right"><rect class="key-rect" x="380" y="120" width="38" height="38"/><text class="key-label" x="399" y="139">PgUp</text></g>
+
+    <!-- Row 4: N-M, comma, period, /, RShift, Up, PgDn -->
+    <g data-token="n" data-side="right"><rect class="key-rect" x="54" y="162" width="38" height="38"/><text class="key-label" x="73" y="181">N</text></g>
+    <g data-token="m" data-side="right"><rect class="key-rect" x="96" y="162" width="38" height="38"/><text class="key-label" x="115" y="181">M</text></g>
+    <g data-token="com" data-side="right"><rect class="key-rect" x="138" y="162" width="38" height="38"/><text class="key-label" x="157" y="181">,</text></g>
+    <g data-token="per" data-side="right"><rect class="key-rect" x="180" y="162" width="38" height="38"/><text class="key-label" x="199" y="181">.</text></g>
+    <g data-token="/" data-side="right"><rect class="key-rect" x="222" y="162" width="38" height="38"/><text class="key-label" x="241" y="181">/</text></g>
+    <g data-token="rshft" data-side="right"><rect class="key-rect" x="264" y="162" width="69" height="38"/><text class="key-label key-label-sm" x="298" y="181">RShift</text></g>
+    <g data-token="up" data-side="right"><rect class="key-rect" x="338" y="162" width="38" height="38"/><text class="key-label" x="357" y="181">Up</text></g>
+    <g data-token="pdn" data-side="right"><rect class="key-rect" x="380" y="162" width="38" height="38"/><text class="key-label" x="399" y="181">PgDn</text></g>
+
+    <!-- Row 5: Space, RAlt, RCtrl, Left, Down, Right -->
+    <g data-token="rspc" data-side="right"><rect class="key-rect" x="2" y="204" width="112" height="38"/><text class="key-label" x="58" y="223">Space</text></g>
+    <g data-token="ralt" data-side="right"><rect class="key-rect" x="118" y="204" width="51" height="38"/><text class="key-label key-label-sm" x="143" y="223">RAlt</text></g>
+    <g data-token="rctrl" data-side="right"><rect class="key-rect" x="173" y="204" width="51" height="38"/><text class="key-label key-label-sm" x="198" y="223">RCtrl</text></g>
+    <g data-token="lft" data-side="right"><rect class="key-rect" x="296" y="204" width="38" height="38"/><text class="key-label" x="315" y="223">Left</text></g>
+    <g data-token="dwn" data-side="right"><rect class="key-rect" x="338" y="204" width="38" height="38"/><text class="key-label" x="357" y="223">Down</text></g>
+    <g data-token="rght" data-side="right"><rect class="key-rect" x="380" y="204" width="38" height="38"/><text class="key-label" x="399" y="223">Right</text></g>
+  </g>
+</svg>
