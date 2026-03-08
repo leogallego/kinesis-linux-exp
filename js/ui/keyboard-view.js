@@ -9,7 +9,7 @@ import { state } from '../app.js';
 
 let _container = null;
 let _svgDoc = null;
-let _onKeySelected = null;
+let _onKeySelectedCallbacks = [];
 
 /**
  * Initialize the keyboard view by loading the SVG.
@@ -65,7 +65,7 @@ export function selectKey(token) {
     labelEl.textContent = `${keyDef.label} [${keyDef.token}]`;
   }
 
-  if (_onKeySelected) _onKeySelected(token);
+  for (const cb of _onKeySelectedCallbacks) cb(token);
 }
 
 /**
@@ -73,7 +73,7 @@ export function selectKey(token) {
  * @param {function(string): void} callback
  */
 export function onKeySelected(callback) {
-  _onKeySelected = callback;
+  _onKeySelectedCallbacks.push(callback);
 }
 
 /**

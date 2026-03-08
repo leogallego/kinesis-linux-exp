@@ -93,11 +93,11 @@
 
 ### Implementation for User Story 3
 
-- [ ] T027 [US3] Extend layout parser in `js/parsers/layout-parser.js` to parse macro lines: `{trigger}{co_trigger}>{s_N}{x_N}{action1}{action2}...`. Handle optional co-trigger, optional speed prefix `{s_N}`, optional multiplay prefix `{x_N}`, special modifiers (`{-key}`, `{+key}`, `{dNNN}`, `{dran}`), and FN macros prefixed with `fn`
-- [ ] T028 [US3] Extend layout generator in `js/parsers/layout-parser.js` to output macro lines in curly-brace syntax. Macros output after remaps. Include speed/multiplay prefixes when set
-- [ ] T029 [US3] Create macro editor UI in `js/ui/macro-editor.js`: modal or panel that allows selecting a trigger key, optionally selecting a modifier co-trigger, building an action sequence by clicking keys or typing, setting speed (1-9) and multiplay (1-9). Show a live preview of the generated macro syntax. "Save Macro" adds it to the profile's macro list
-- [ ] T030 [US3] Implement tap-and-hold parsing and generation in `js/parsers/layout-parser.js`: parse `[position]>[tap_action][t&hNNN][hold_action]` lines. Generate them in the same format. Add tap-and-hold configuration to the macro editor UI with a delay slider (1-999ms)
-- [ ] T031 [US3] Display existing macros in the UI: show a list of current macros in the side panel with trigger key, action summary, and edit/delete buttons. Clicking a macro opens it in the macro editor for modification
+- [x] T027 [US3] Extend layout parser in `js/parsers/layout-parser.js` to parse macro lines: `{trigger}{co_trigger}>{s_N}{x_N}{action1}{action2}...`. Handle optional co-trigger, optional speed prefix `{s_N}`, optional multiplay prefix `{x_N}`, special modifiers (`{-key}`, `{+key}`, `{dNNN}`, `{dran}`), and FN macros prefixed with `fn`
+- [x] T028 [US3] Extend layout generator in `js/parsers/layout-parser.js` to output macro lines in curly-brace syntax. Macros output after remaps. Include speed/multiplay prefixes when set
+- [x] T029 [US3] Create macro editor UI in `js/ui/macro-editor.js`: modal or panel that allows selecting a trigger key, optionally selecting a modifier co-trigger, building an action sequence by clicking keys or typing, setting speed (1-9) and multiplay (1-9). Show a live preview of the generated macro syntax. "Save Macro" adds it to the profile's macro list
+- [x] T030 [US3] Implement tap-and-hold parsing and generation in `js/parsers/layout-parser.js`: parse `[position]>[tap_action][t&hNNN][hold_action]` lines. Generate them in the same format. Add tap-and-hold configuration to the macro editor UI with a delay slider (1-999ms)
+- [x] T031 [US3] Display existing macros in the UI: show a list of current macros in the side panel with trigger key, action summary, and edit/delete buttons. Clicking a macro opens it in the macro editor for modification
 
 **Checkpoint**: User Story 3 fully functional — can create, edit, delete macros and tap-and-hold bindings, save them in layout files
 
@@ -111,9 +111,9 @@
 
 ### Implementation for User Story 4
 
-- [ ] T032 [US4] Create profile tab bar in `js/ui/profile-tabs.js`: render 9 numbered tabs (1-9) below the toolbar. Clicking a tab switches the active profile. Show a dirty indicator (dot/asterisk) on tabs with unsaved changes. Highlight the active tab
-- [ ] T033 [US4] Implement profile switching in `js/app.js`: when switching profiles, save current state in memory, load the target profile's `layoutN.txt` and `ledN.txt` from the working directory (or from cached state if already loaded). If current profile has unsaved changes, show a confirmation prompt before switching
-- [ ] T034 [US4] Implement profile duplication in `js/app.js`: "Duplicate Profile" button copies the current profile's layout and LED data to a target profile number selected by the user. Write both `layoutN.txt` and `ledN.txt` for the target profile
+- [x] T032 [US4] Create profile tab bar in `js/ui/profile-tabs.js`: render 9 numbered tabs (1-9) below the toolbar. Clicking a tab switches the active profile. Show a dirty indicator (dot/asterisk) on tabs with unsaved changes. Highlight the active tab
+- [x] T033 [US4] Implement profile switching in `js/app.js`: when switching profiles, save current state in memory, load the target profile's `layoutN.txt` and `ledN.txt` from the working directory (or from cached state if already loaded). If current profile has unsaved changes, show a confirmation prompt before switching
+- [x] T034 [US4] Implement profile duplication in `js/app.js`: "Duplicate Profile" button copies the current profile's layout and LED data to a target profile number selected by the user. Write both `layoutN.txt` and `ledN.txt` for the target profile
 
 **Checkpoint**: User Story 4 fully functional — can switch between 9 profiles, each with independent remaps and lighting
 
@@ -127,9 +127,9 @@
 
 ### Implementation for User Story 5
 
-- [ ] T035 [US5] Implement settings parser in `js/parsers/settings-parser.js`: `parseSettings(text)` returns a `KeyboardSettings` object. Parse key=value lines, preserve original field order and casing, handle unknown fields. `generateSettings(settings)` outputs with CRLF line endings. Must round-trip. Per contracts/file-formats.md
-- [ ] T036 [US5] Create settings panel in `js/ui/settings-panel.js`: modal or slide-out panel showing all settings fields with appropriate controls — toggles for ON/OFF fields (`gameMode`, `nkroMode`, `programKeyLock`, `profileSyncMode`), number inputs for numeric fields (`macroSpeed`, `statusPlaySpeed`), dropdown for `startupFile` and `vdrive`
-- [ ] T037 [US5] Wire settings I/O in `js/app.js`: load `settings/kbd_settings.txt` on directory open, save on settings panel confirmation. Create `settings/` subdirectory if missing
+- [x] T035 [US5] Implement settings parser in `js/parsers/settings-parser.js`: `parseSettings(text)` returns a `KeyboardSettings` object. Parse key=value lines, preserve original field order and casing, handle unknown fields. `generateSettings(settings)` outputs with CRLF line endings. Must round-trip. Per contracts/file-formats.md
+- [x] T036 [US5] Create settings panel in `js/ui/settings-panel.js`: modal or slide-out panel showing all settings fields with appropriate controls — toggles for ON/OFF fields (`gameMode`, `nkroMode`, `programKeyLock`, `profileSyncMode`), number inputs for numeric fields (`macroSpeed`, `statusPlaySpeed`), dropdown for `startupFile` and `vdrive`
+- [x] T037 [US5] Wire settings I/O in `js/app.js`: load `settings/kbd_settings.txt` on directory open, save on settings panel confirmation. Create `settings/` subdirectory if missing
 
 **Checkpoint**: User Story 5 fully functional — can view and edit all global keyboard settings
 

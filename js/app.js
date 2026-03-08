@@ -10,9 +10,9 @@ import { initKeyboardView, resetKeyStates } from './ui/keyboard-view.js';
 import { initActionPicker, refreshRemapIndicators } from './ui/key-item.js';
 import { initEffectSelector, refreshEffectSelector } from './ui/effect-selector.js';
 import { initColorPicker, refreshPerKeyColors } from './ui/color-picker.js';
-import { initMacroEditor } from './ui/macro-editor.js';
-import { initProfileTabs } from './ui/profile-tabs.js';
-import { initSettingsPanel } from './ui/settings-panel.js';
+import { initMacroEditor, refreshMacroList } from './ui/macro-editor.js';
+import { initProfileTabs, refreshProfileTabs } from './ui/profile-tabs.js';
+import { initSettingsPanel, refreshSettingsPanel } from './ui/settings-panel.js';
 
 // ---------------------------------------------------------------------------
 // Application State
@@ -179,6 +179,7 @@ async function loadSettings() {
   const text = await readProfileFile('settings', 'kbd_settings.txt');
   if (text !== null) {
     state.settings = parseSettings(text);
+    refreshSettingsPanel();
   }
 }
 
@@ -235,6 +236,8 @@ export function refreshUI() {
   refreshRemapIndicators();
   refreshEffectSelector();
   refreshPerKeyColors();
+  refreshMacroList();
+  refreshProfileTabs();
 }
 
 /**

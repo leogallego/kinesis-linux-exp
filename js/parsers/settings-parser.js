@@ -1,6 +1,6 @@
 /**
  * Settings file parser and generator for kbd_settings.txt.
- * Stub: parsing logic added in US5 (T035).
+ * Preserves original field order, casing, and unrecognized fields.
  */
 
 /**
@@ -9,7 +9,32 @@
  * @returns {KeyboardSettings}
  */
 export function parseSettings(text) {
-  return {};
+  const settings = {
+    fields: {},
+    rawEntries: [],
+  };
+
+  if (!text || !text.trim()) return settings;
+
+  const lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+
+    const eqIdx = trimmed.indexOf('=');
+    if (eqIdx > 0) {
+      const key = trimmed.substring(0, eqIdx);
+      const value = trimmed.substring(eqIdx + 1);
+      settings.fields[key] = value;
+      settings.rawEntries.push({ index: i, key, originalLine: line });
+    } else {
+      settings.rawEntries.push({ index: i, key: null, originalLine: line });
+    }
+  }
+
+  return settings;
 }
 
 /**
@@ -18,5 +43,18 @@ export function parseSettings(text) {
  * @returns {string}
  */
 export function generateSettings(settings) {
-  return '';
+  if (!settings || !settings.rawEntries) return '';
+
+  const lines = [];
+
+  for (const entry of settings.rawEntries) {
+    if (entry.key && entry.key in settings.fields) {
+      lines.push(`${entry.key}=${settings.fields[entry.key]}`);
+    } else {
+      lines.push(entry.originalLine);
+    }
+  }
+
+  if (lines.length === 0) return '';
+  return lines.join('\r\n') + '\r\n';
 }

@@ -446,6 +446,169 @@ select {
   color: #fff;
 }
 
+/* === Macro Editor === */
+.macro-new-btn {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: var(--gap);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.macro-new-btn:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.macro-section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 8px 0 4px;
+}
+
+.macro-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: var(--radius);
+  background: rgba(42, 42, 74, 0.4);
+  margin-bottom: 4px;
+}
+
+.macro-item--disabled {
+  opacity: 0.5;
+}
+
+.macro-item__info {
+  flex: 1;
+  font-size: 0.82rem;
+  min-width: 0;
+}
+
+.macro-item__actions {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.macro-item__meta {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.macro-item__btns {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.macro-item__btn {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+}
+
+.macro-item__btn--del {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.macro-input {
+  width: 100%;
+  padding: 6px 10px;
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--key-border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+}
+
+.macro-sequence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px;
+  min-height: 32px;
+  background: var(--bg);
+  border: 1px solid var(--key-border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+}
+
+.macro-action-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 6px;
+  font-size: 0.78rem;
+  background: var(--key-bg);
+  border: 1px solid var(--key-border);
+  border-radius: 3px;
+}
+
+.macro-action-remove {
+  cursor: pointer;
+  color: var(--error);
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.macro-special-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.macro-special-btn {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+}
+
+.macro-preview {
+  display: block;
+  padding: 6px 8px;
+  font-size: 0.78rem;
+  background: var(--bg);
+  border: 1px solid var(--key-border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  word-break: break-all;
+  font-family: monospace;
+}
+
+.macro-btn-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.macro-save-btn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.macro-save-btn:hover {
+  background: var(--accent-hover);
+}
+
+/* === Settings Toggle === */
+.settings-toggle {
+  padding: 4px 16px;
+  font-size: 0.85rem;
+  border-radius: var(--radius);
+}
+
+.settings-toggle--on {
+  background: var(--success);
+  border-color: var(--success);
+  color: #fff;
+}
+
 /* === Toast === */
 .toast {
   position: fixed;
