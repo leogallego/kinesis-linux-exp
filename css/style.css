@@ -109,6 +109,18 @@ select {
   margin-left: auto;
 }
 
+.toolbar__ref-link {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.toolbar__ref-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 .status-badge {
   font-size: 0.85rem;
   color: var(--text-muted);

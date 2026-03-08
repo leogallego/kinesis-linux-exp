@@ -139,11 +139,11 @@
 
 **Purpose**: Improvements that span multiple user stories
 
-- [ ] T038 [P] Add error handling for I/O failures in `js/app.js`: catch and display user-friendly messages when directory becomes inaccessible, file write fails, or permission is denied. Satisfies edge case from spec
-- [ ] T039 [P] Add round-trip fidelity validation: manually test that loading and saving each file type without changes produces byte-identical output. Fix any parser/generator discrepancies. Satisfies SC-006
-- [ ] T040 [P] Add disabled line support in UI: show asterisk-prefixed lines in layout display as "disabled" entries with a toggle to enable/disable them
-- [ ] T041 Add position token map reference in `index.html`: embed or link the `assets/kinesis-freestyle-rgb-position-picture.png` image so users can reference physical key positions. Satisfies FR-014
-- [ ] T042 [P] Polish CSS in `css/style.css`: responsive layout for different screen sizes, hover states for all interactive elements, keyboard focus indicators for accessibility, consistent spacing and typography
+- [x] T038 [P] Add error handling for I/O failures in `js/app.js`: catch and display user-friendly messages when directory becomes inaccessible, file write fails, or permission is denied. Satisfies edge case from spec
+- [x] T039 [P] Add round-trip fidelity validation: manually test that loading and saving each file type without changes produces byte-identical output. Fix any parser/generator discrepancies. Satisfies SC-006
+- [x] T040 [P] Add disabled line support in UI: show asterisk-prefixed lines in layout display as "disabled" entries with a toggle to enable/disable them
+- [x] T041 Add position token map reference in `index.html`: embed or link the `assets/kinesis-freestyle-rgb-position-picture.png` image so users can reference physical key positions. Satisfies FR-014
+- [x] T042 [P] Polish CSS in `css/style.css`: responsive layout for different screen sizes, hover states for all interactive elements, keyboard focus indicators for accessibility, consistent spacing and typography
 
 ---
 
